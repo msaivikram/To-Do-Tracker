@@ -1,0 +1,22 @@
+
+<mat-toolbar class="nav">
+    <img class="image" src="../../assets/images/icon.jpg"/>
+
+    <!-- <p routerLink="/past"><mat-icon>history</mat-icon>Past</p>
+    <p routerLink="/completed" ><mat-icon>done</mat-icon>Completed</p> -->
+    
+    <h1 class="title" routerLink="/today" >To-Do-Tracker</h1>
+<!--    
+    <p class="left" routerLink="/addTask" ><mat-icon>add</mat-icon>Add Task</p>
+    <p class="left1" routerLink="/archived"> <mat-icon>archive</mat-icon>Archived</p> -->
+    <div *ngIf="tokendata!=null">
+    <button mat-raised-button (click)="logOut()" class="logOut"  >Logout</button>
+    </div>
+
+
+    <!-- <button mat-icon-button type="text"  routerLink="" style="margin-left: 15px;margin-right: 4%;font-size: 20px;color: white;" class="home">Home</button> -->
+    <button mat-icon-button color="text" routerLink="/today" style="margin-left: 15px;margin-right: 4%;font-size: 20px;color: white;" class="home">
+        <mat-icon>home</mat-icon>
+      </button>
+    </mat-toolbar>
+

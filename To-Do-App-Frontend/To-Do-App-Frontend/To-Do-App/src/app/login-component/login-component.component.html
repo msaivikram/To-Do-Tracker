@@ -1,0 +1,80 @@
+<!-- <form (submit)="login()">
+    <input type="text" [(ngModel)]="User.userEmail" name="userEmail" placeholder="User Email">
+    <input type="password" [(ngModel)]="User.userPassword" name="userPassword" placeholder="Password">
+    <button type="submit">Log In</button>
+</form> -->
+
+
+<!-- <h2>Login Form</h2>
+<div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+<form action="/action_page.php" method="post"(submit)="login()">
+    <div class="container">
+        <label for="uname"><b>UserEmail</b></label>
+    <input type="text" [(ngModel)]="User.userEmail" name="userEmail" placeholder="User Email">
+    <label for="uname"><b>userPassword</b></label>
+    <input type="password" [(ngModel)]="User.userPassword" name="userPassword" placeholder="Password">
+    <button type="submit">Log In</button>
+</div>
+</form> -->
+<!-- <mat-toolbar class="nav">
+  <img class="image" src="../../assets/images/icon.jpg"/>
+  <button mat-icon-button type="text"  routerLink="" style="margin-left: 75%;margin-right: 4%;font-size: 20px;color: white;">Home</button>
+  <button mat-icon-button type="text"  routerLink="/register" style="margin-left: auto;margin-right: 5%; font-size: 20px;color: white;">Sign-Up</button>
+
+     
+</mat-toolbar> -->
+<div class="img1">
+<div  style="display: flex;">
+  
+<!-- <img  class="loginImg" src="../../assets/images/login.jpg"/> -->
+
+<mat-card class="login-card">
+
+  <form [formGroup]="loginForm" (submit)="login()">
+    <mat-form-field appearance="outline">
+      <mat-label style="color: whitesmoke;font-size: 1.5em;">Enter your Email Id</mat-label>
+      <input matInput type="text" formControlName="email" placeholder="Email Id">
+      <mat-error *ngIf="loginForm.get('userId')?.hasError('required') " style="font-size: 1.5em; color: blue;" >Email Id is required</mat-error>
+      <mat-error *ngIf="loginForm.get('email')?.hasError('email') " style="font-size: 1.5em; color: blue;"> Invalid Email Id</mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label style="color: whitesmoke;font-size: 1.5em;">Enter the Password</mat-label>
+      <input matInput type="password" formControlName="userPassword" placeholder="Password">
+      <mat-error *ngIf="loginForm.get('userPassword')?.hasError('required') " style="font-size: 1.5em; color: blue;">Password is required</mat-error>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button type="submit" color="primary" class="btn" [disabled]="!loginForm.valid" style="color: white; background-color: rgb(222, 104, 104) ;">Log In</button>
+  </form>
+</mat-card>
+
+
+  
+</div>
+<div class="listContent">
+  <img src="../../assets/images/loginPage.jpg" alt="">
+</div>
+<div class="para">
+  <p>Welcome to login page </p>
+ <p >To get the access on your </p>
+ <p> please provide the valid  credentials</p>
+ 
+</div>
+<!-- <div >
+  <mat-card class="card">
+    <mat-card-header>
+      <mat-card-title style="color:darkolivegreen;">Entry Data</mat-card-title>
+      <mat-card-subtitle style="color: blanchedalmond;" aria-flowto="font-size:2em">Please give a valid credentials to get Access to your account</mat-card-subtitle>
+      
+      <mat-card-subtitle style="color: cadetblue;">** Please like and share our aplication and give your valuable rating</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions align="end" class="subsribe">
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+</div>

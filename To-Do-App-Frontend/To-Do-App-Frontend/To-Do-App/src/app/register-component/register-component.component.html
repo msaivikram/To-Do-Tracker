@@ -1,0 +1,67 @@
+<!-- <div class="heading">
+<h1 class="title">TO-DO TRACKER</h1>
+<h3 class="title1">GET THINGS DONE</h3>
+<h3 class="title2">One By One...</h3>
+</div> -->
+<div style="display: flex;" class="img">
+
+  <div >
+    <mat-card class="card1">
+      <mat-card-header>
+        <mat-card-title style="color:darkolivegreen; font-size: 2em; padding: 10px;">Sign Up</mat-card-title>
+        <mat-card-subtitle style="color: blanchedalmond; font-size: 1em; padding: 10px;">*** To Create an User Account Registration is Mandatory</mat-card-subtitle>
+        
+        <mat-card-subtitle style="color: cadetblue; font-size: 1em; padding: 10px;">** Please like and share our aplication and give your valuable rating</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions align="end" class="subsribe">
+        <!-- <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button> -->
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <!-- <div >
+    <img  src='../../assets/images/register.jpg' class="regImg"/>
+  </div> -->
+  <div >
+  <mat-card class="card">
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Register Form</h1>
+  <form [formGroup]="userForm">
+    <!-- <mat-form-field>
+      <input matInput placeholder="UserId" formControlName="userId">
+      <mat-error *ngIf="userForm.get('userId')?.hasError('required')">Please enter a valid id address</mat-error>
+      <mat-error *ngIf="userForm.get('userId')?.hasError('pattern')">userId is required</mat-error>
+    </mat-form-field> -->
+    <mat-form-field>
+      <input matInput placeholder="Email" formControlName="email">
+      <mat-error *ngIf="userForm.get('email')?.hasError('email')" style="font-size: 1.5em; color: blue;">Please enter a valid email address</mat-error>
+      <mat-error *ngIf="userForm.get('email')?.hasError('required')" style="font-size: 1.5em; color: blue;">Email is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" formControlName="userPassword">
+      <mat-error *ngIf="userForm.get('userPassword')?.hasError('required')" style="font-size: 1.5em; color: blue;">Password is required</mat-error>
+      <mat-error *ngIf="userForm.get('userPassword')?.hasError('minlength')" style="font-size: 1.5em; color: blue;">Password must be at least 6 characters</mat-error>
+      <mat-error *ngIf="userForm.get('userPassword')?.hasError('pattern')" style="font-size: 1.5em; color: blue;">Password must contain at least one lowercase letter, one uppercase letter, and one number</mat-error>
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput placeholder="User Name" formControlName="userName">
+      <mat-error *ngIf="userForm.get('userName')?.hasError('required')" style="font-size: 1.5em; color: blue;">User Name is required</mat-error>
+      <mat-error *ngIf="userForm.get('userName')?.hasError('minlength')" style="font-size: 1.5em; color: blue;">User Name must be min 3 alphabet</mat-error>
+      <mat-error *ngIf="userForm.get('userName')?.hasError('maxlength')" style="font-size: 1.5em; color: blue;">User Name must be max 20 alphabet</mat-error>
+      <mat-error *ngIf="userForm.get('userName')?.hasError('pattern')" style="font-size: 1.5em; color: blue;">User Name must be alphabet</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Phone No" formControlName="userphoneNumber">
+      <mat-error *ngIf="userForm.get('userphoneNumber')?.hasError('pattern')" style="font-size: 1.5em; color: blue;">Please enter a valid Phone number that should start with 7/8/9</mat-error>
+      <mat-error *ngIf="userForm.get('userphoneNumber')?.hasError('required')" style="font-size: 1.5em; color: blue;">Phone no is required</mat-error>
+    </mat-form-field>
+    <div class="form-actions">
+      <button (click)="register()" type="button">Save</button>
+    </div>
+    <p class="login">Already a user? <a routerLink="/login">Login</a></p>
+  </form>
+  </mat-card>
+  </div>
+
+  
+  </div>

@@ -1,0 +1,39 @@
+<body><mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false" style="background-color:rgb(242, 109, 109);">
+      <mat-toolbar style="color: darkblue;">Menu</mat-toolbar>
+      <mat-nav-list class="menuList">
+        <p mat-list-item routerLink="/addTask" style="color: white;">Add Task</p>
+        <p mat-list-item routerLink="/archived" style="color: white;">Archived</p>
+        <p mat-list-item routerLink="/completed" style="color: white;">Completed</p>
+        <p mat-list-item routerLink="/past" style="color: white;">Past-Tasks</p>
+        <p mat-list-item routerLink="/today" style="color: white;">Today</p>
+        <p mat-list-item routerLink="/restOfTheTasks" style="color: white;">Remaining Tasks </p>
+        <hr>
+        <p mat-list-item style="color: blue;">Priority Level:</p>
+        <p mat-list-item style="color: white;">High</p><hr color="red" style="width: 50px;position: relative;top:-32px;left:40px">
+        <p mat-list-item style="color: white;">Medium</p><hr color="yellow" style="width: 50px;position: relative;top:-32px;left:40px">
+        <p mat-list-item style="color: white;">Low</p><hr color="blue" style="width: 50px;position: relative;top:-32px;left:40px">
+  
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+   
+      <!-- <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>TodoList</span>
+      </mat-toolbar> -->
+      <app-todo></app-todo>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <!-- <app-footer></app-footer> -->
+  </body>

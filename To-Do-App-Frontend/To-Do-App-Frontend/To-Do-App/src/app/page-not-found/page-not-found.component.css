@@ -1,0 +1,18 @@
+h1{
+    color: darkred;
+    font-weight: bold;
+    font-size: 3em;
+}
+h2{
+    color: darkred;
+    font-weight: bold;
+    font-size: 3em;
+}
+.img1{
+    background-image: url(../../assets/images/notFound.gif);
+    height: 100%;
+}
+.img1 a{
+    font-size: 2em;
+    color: darkorange;
+}

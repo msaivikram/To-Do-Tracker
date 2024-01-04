@@ -1,0 +1,70 @@
+<!-- <app-header></app-header> -->
+<div class="imgSetup">
+<div class="msg" *ngIf="message; else taskList">
+  <h1 style="color: red;">{{ message }}</h1>
+  <h1 style="color: green;">Click here to <a routerLink="/addTask">add a task</a></h1>
+</div>
+
+<div *ngIf="Tasks">
+</div>
+<div class="search">
+  <input  type ="text" class="form-control" [(ngModel)]="searchText" aria-label="Sizing example input"
+    placeholder="Search Task By Heading">
+  <button (click)="onSearch()" type="submit" style="background-color: transparent;"><mat-icon>search</mat-icon></button>
+</div>
+
+<div style="position:fixed;top:110px;margin-left: 3%;">
+  <img matTooltip="Click here to Sort by Task Priority" (click)="sortTasksByPriority()" style="width: 9%;height: auto;"
+     />
+</div>
+
+<ng-template #taskList>
+
+  <div class="cardBody">
+    <mat-card class="card" *ngFor="let task of Tasks">
+
+      <mat-icon *ngIf="task.isCompleted" class="tick-icon">done</mat-icon>
+      <mat-icon [matMenuTriggerFor]="taskMenu" class="menuIcon">menu</mat-icon>
+      <h1 [ngClass]="{'completed-task': showTickIcon}" [ngStyle]="{'color': getBorderColor(task.priority)}"
+        class="taskHead">
+        {{ task.taskHeading }}
+        <mat-icon *ngIf="showTickIcon" class="tick-icon">done</mat-icon>
+      </h1>
+      <mat-card-subtitle class="content">
+        {{ task.taskContent }}
+      </mat-card-subtitle>
+      <br>
+      <h4><mat-icon class="date">event</mat-icon>
+        {{ task.dueDate }}
+      </h4>
+
+      <h4> <mat-icon class="time">schedule</mat-icon>
+        {{ task.dueTime }}
+      </h4>
+
+      <h4> <mat-icon class="priority">grade</mat-icon>
+        {{ task.priority }}
+      </h4>
+
+      <mat-menu #taskMenu="matMenu" class="menu">
+        <button mat-menu-item (click)="markAsCompleted(task.taskID)">
+          Mark as Completed
+        </button>
+        <button mat-menu-item (click)="markAsArchived(task.taskID)">
+          Mark as Archived
+        </button>
+        <button mat-menu-item (click)="deleteTask(task.taskID)">
+          Delete
+        </button>
+        <button mat-menu-item (click)="onCardClick(task.taskID)">
+          Edit
+        </button>
+      </mat-menu>
+      
+
+    </mat-card>
+
+  </div>
+</ng-template>
+<button mat-raised-button (click)="sortTasksByPriority()" class="prioBtn" style="color: white;">SORT BY PRIORITY</button>
+</div>

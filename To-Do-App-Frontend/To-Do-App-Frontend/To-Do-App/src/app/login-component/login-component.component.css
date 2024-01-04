@@ -1,0 +1,161 @@
+.login-card {
+    /* max-width: 400px; */
+    width: 30%;
+    padding: 20px;
+    border: 1px solid rgb(244, 13, 52);
+    box-shadow: 0px 0px 10px 10px #d0e7fe;
+    border-radius: 4px;
+    background-color: rgb(165, 128, 162);
+    border-radius: 25px;
+    /* margin-left:35%; */
+   margin-left:800px;
+    /* margin-right: 300px; */
+    margin-top:100px;
+    text-align: center;
+    height: 350px;
+  }
+  
+  mat-form-field {
+    width: 75%;
+    margin-top: 15px;
+  }
+  
+  button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width:140px;
+  }
+  
+  .form-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  p {
+    margin-top: 10px;
+  }
+  
+  /* .loginImg
+  {
+    width:100%;
+    
+  } */
+  
+  .header
+  {
+    transform: scale(0.5)
+  }
+  
+  .nav{
+    background-color: #6ea5e0;
+    padding-bottom: 5px;
+   
+  }
+ 
+  
+  .img1{
+    /* margin-left: 3.5%;
+    width: 4%;
+    height: auto;
+    width: 3%;
+    border-radius: 17px;
+    box-shadow: 1px 1px 2px 2p burlywood; */
+    background-image: url(../../assets/images/login-pageneww.jpg);
+    height: 100%;
+  }
+  
+  .btn{
+    padding: 25px;
+    width: 45%;
+    border-radius: 25px;
+  
+  }
+  
+  .card{
+    /* margin-right: 10px; */
+    width: 30%;
+   margin-top: -250px;
+   margin-left: 50px;
+   box-shadow: palevioletred 20px 25px 3px;
+  }
+  .listContent img{
+    height:350px ;
+    width: 450px;
+   position: relative;
+   top: -350px;
+   left: 120px;
+   border-radius: 150px;
+  }
+
+  .para{
+    /* position: relative;
+    top: -320px;
+    left: 590px; */
+    font-style: italic;
+    font-size: 1em;
+    margin-top: -270px;
+    margin-left: 590px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2em;
+    color: rgb(249, 8, 8);
+    
+  }
+  
+  /* body {font-family: Arial, Helvetica, sans-serif;}
+  form {border: 3px solid #f1f1f1;}
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  } */
+
+  

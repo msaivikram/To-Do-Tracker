@@ -1,0 +1,66 @@
+<!-- <app-header></app-header> -->
+<!-- <img class="img" src="../../assets/images/img22.webp"/> -->
+<div class="img1">
+<mat-card class="card">
+<div style="display: flex;">
+  <h1>Edit Task</h1><button style="margin-top: -2%;margin-left: 3%;" mat-icon-button (click)="changeboolean()">
+  <mat-icon>edit</mat-icon>
+  </button>
+</div>
+
+<form [formGroup]="Details" (ngSubmit)="onsubmit()">  
+  <mat-form-field appearance="outline">
+    <mat-label>Task Heading</mat-label>
+    <input matInput formControlName="taskHeading"  [readonly]="formchangingvalue || !formchangingvalue">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="desc" appearance="outline">
+    <mat-label>Task Content</mat-label>
+    <input matInput formControlName="taskContent" [readonly]="!formchangingvalue">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="cat" appearance="outline">
+    <mat-label>Category</mat-label>
+    <input matInput formControlName="category" [readonly]="!formchangingvalue">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+
+    <label for="dueDate">Due Date</label>
+    <input matInput type ="date" id="dueDate" formControlName="dueDate" [min]="minDate" />
+ 
+    <mat-datepicker #dueDatePicker></mat-datepicker>
+  </mat-form-field>
+<br>
+  <mat-form-field class="time" appearance="outline">
+    <mat-label>Due Time (HH:MM)</mat-label>
+    <input matInput formControlName="dueTime" [readonly]="!formchangingvalue">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Priority Level</mat-label>
+    <input matInput formControlName="priority" [readonly]="!formchangingvalue">
+  </mat-form-field>
+  <br>
+
+  <br>
+  <button class="btn" mat-raised-button color="accent" type="submit" [disabled]="!Details.valid || !formchangingvalue">Update Task</button>
+</form>
+</mat-card>
+
+<div >
+<mat-card class="card1">
+  <mat-card-header>
+    <mat-card-title style="color:darkolivegreen;">Modification</mat-card-title>
+    <mat-card-subtitle style="color: blanchedalmond;" aria-flowto="font-size:2em">*** In this You Can Able To Change/Modify The Task</mat-card-subtitle>
+    
+    <mat-card-subtitle style="color: rgb(15, 16, 16);">** Please like and share our aplication and give your valuable rating</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions align="end" class="subsribe">
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>
+<!-- <app-footer></app-footer> -->

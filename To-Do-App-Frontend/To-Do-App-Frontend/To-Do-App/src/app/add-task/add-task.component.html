@@ -1,0 +1,78 @@
+<!-- <app-header></app-header> -->
+<div class="msg">
+<mat-card class="professional-card">
+  <h1 class="add">Add Task</h1>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <label for="title">Task Title</label>
+    <input matInput type="text" id="taskHeading" formControlName="taskHeading" />
+    <mat-error *ngIf="taskForm.get('taskHeading')?.hasError('required')">Task Title is required</mat-error>
+    <mat-error *ngIf="taskForm.get('taskHeading')?.hasError('minlength')">Task Title must be at least 3 characters long</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="desc">
+    <label for="description">Task Description</label>
+    <input matInput type="text" id="description" formControlName="taskContent" rows="3">
+    <mat-error *ngIf="taskForm.get('taskContent')?.hasError('required')">Task Description is required</mat-error>
+    <mat-error *ngIf="taskForm.get('taskContent')?.hasError('minlength')">Task Description must be at least 5 characters long</mat-error>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field class="cat">
+    <label for="category">Category</label>
+    <select name="cars" id="cars" formControlName="category">
+      <option value="Education">Education</option>
+      <option value="Health">Health</option>
+      <option value="Personnel">Personnel</option>
+      <option value="Entertainment">Entertainment</option>
+    </select>
+     <!-- <input matInput type="text" id="category" formControlName="category" /> -->
+     <mat-error *ngIf="taskForm.get('category')?.hasError('required')">Category is required</mat-error>
+    <mat-error *ngIf="taskForm.get('category')?.hasError('minlength')">Category must be at least 3 characters long</mat-error>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <label for="dueDate">Due Date</label>
+    <input matInput type ="date" id="dueDate" formControlName="dueDate" [min]="minDate" />
+    <mat-error *ngIf="taskForm.get('dueDate')?.hasError('required')">Due Date is required</mat-error>
+    <mat-error *ngIf="taskForm.get('dueDate')?.hasError('dateFromYesterday')">Due Date can't be from the past</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="time">
+    <label for="dueTime">Due Time</label>
+    <input matInput type="time" id="dueTime" formControlName="dueTime" />
+    <mat-error *ngIf="taskForm.get('dueTime')?.hasError('invalidTime')">Cannot choose a time in the past</mat-error>
+  </mat-form-field>
+
+
+  <br>
+  <mat-radio-group formControlName="priority">
+    <mat-radio-button value="HIGH">High</mat-radio-button>
+    <mat-radio-button value="MEDIUM">Medium</mat-radio-button>
+    <mat-radio-button value="LOW">Low</mat-radio-button>
+    <mat-error *ngIf="taskForm.get('priority')?.hasError('required')">Priority Level is required</mat-error>
+  </mat-radio-group>
+
+  <br>
+  <button type="submit" mat-raised-button color="primary" [disabled]="!taskForm.valid" style="background-color: rgb(222, 104, 104) ;">Save</button>
+
+</form>
+</mat-card>
+
+<div>
+<mat-card class="card1">
+  <mat-card-header>
+    <mat-card-title style="color:darkolivegreen; font-size: 3em; padding: 10px;">Create</mat-card-title>
+    <mat-card-subtitle style="color: blanchedalmond; font-size: 1.5em; padding: 10px;">*** In this view you can able to create/add the task based on date and time.</mat-card-subtitle>
+    
+    <mat-card-subtitle style="color: rgb(15, 16, 16); font-size: 1.5em; padding: 10px;">** Please like and share our aplication and give your valuable rating</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions align="end" class="subsribe">
+    <!-- <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+</mat-card>
+</div>
+</div>
+<!-- <app-footer></app-footer> -->

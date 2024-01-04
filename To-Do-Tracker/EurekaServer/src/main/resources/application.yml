@@ -1,0 +1,19 @@
+#yml class is faster than properties class, so we use yml class
+#spring.application.name=eureka-service
+#server.port=8761
+#eureka.client.fetchRegistry=false
+#eureka.client.registerWithEureka=false
+
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 8761
+
+eureka:
+  renewalPercentThreshold=0:
+    85:
+  client:
+    fetchRegistry: false
+    registerWithEureka: false

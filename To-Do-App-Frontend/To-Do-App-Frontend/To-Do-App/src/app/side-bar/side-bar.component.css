@@ -1,0 +1,37 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Signika&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+.sidenav-container {
+  height: 92%;
+  background-image: url(../../assets/images/backroung-All.jpg);
+  /* background-repeat: no-repeat; */
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.menuList p
+{
+  font-size: larger;
+  margin-left: 14px;
+  padding-bottom: 10px;
+  font-family: 'Signika';
+  font-weight: bold
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+:root {
+  --background-color: white;
+}
+body {
+  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
+}
